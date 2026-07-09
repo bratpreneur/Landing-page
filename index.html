@@ -1,0 +1,1137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>BERAT | 2 sources de revenus en 90 jours : prouve, pas promis</title>
+  <meta name="description" content="UGC, IA et investissement comme competence. Ex-ingenieur Renault, +500 personnes accompagnees en 2 ans. Reserve ton appel de qualification gratuit de 30 min. Preuve avant promesse, garantie 7 jours, selection reelle.">
+  <meta name="theme-color" content="#0A0A0B">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="BERAT">
+  <meta property="og:title" content="BERAT | 2 sources de revenus en 90 jours : prouve, pas promis">
+  <meta property="og:description" content="UGC, IA et investissement comme competence. Ex-ingenieur Renault, +500 personnes accompagnees en 2 ans. Reserve ton appel de qualification gratuit de 30 min.">
+  <meta property="og:url" content="https://berat.exemple/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BERAT | 2 sources de revenus en 90 jours : prouve, pas promis">
+  <meta name="twitter:description" content="UGC, IA et investissement comme competence. Reserve ton appel de qualification gratuit de 30 min.">
+
+  <!-- Favicon emoji data-uri -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%93%88</text></svg>">
+
+  <!-- Google Fonts (polices externes autorisees) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM — palette, typographie, tokens
+       ============================================================ */
+    :root {
+      --bg:#0A0A0B;
+      --surface:#101013;
+      --surface2:#17171B;
+      --text:#F4EFE6;
+      --muted:#9A958A;
+      --line:#26251F;
+      --accent:#D6B24A;
+      --accent-hi:#F0D688;
+      --accent-deep:#A8842E;
+
+      --font-display:"Sora", system-ui, sans-serif;
+      --font-body:"Manrope", system-ui, sans-serif;
+
+      --maxw:1160px;
+      --radius:16px;
+      --radius-btn:10px;
+      --ease:cubic-bezier(0.16,1,0.3,1);
+    }
+
+    /* ============================================================
+       RESET / BASE
+       ============================================================ */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      font-family:var(--font-body);
+      background:var(--bg);
+      color:var(--text);
+      font-size:1.0625rem;
+      line-height:1.6;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+    ul{list-style:none}
+
+    h1,h2,h3{font-family:var(--font-display);letter-spacing:-0.02em;line-height:1.1}
+    h1{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:800}
+    h2{font-size:clamp(2rem,4vw,3rem);font-weight:700}
+    h3{font-size:1.5rem;font-weight:600;letter-spacing:-0.01em}
+    p{color:var(--text)}
+    .gold{color:var(--accent-hi)}
+    strong{color:var(--text);font-weight:700}
+
+    /* Layout helpers */
+    .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1.15rem,4vw,2rem)}
+    section{position:relative;padding-block:clamp(3.5rem,8vw,6rem)}
+    .eyebrow{
+      display:inline-block;
+      font-size:0.75rem;
+      text-transform:uppercase;
+      letter-spacing:0.18em;
+      font-weight:600;
+      color:var(--accent);
+      margin-bottom:1.1rem;
+    }
+    .lead{color:var(--muted);font-size:clamp(1.05rem,2.4vw,1.25rem);line-height:1.55}
+    .body-text{color:var(--muted);max-width:64ch}
+    .section-head{max-width:52rem}
+
+    /* ============================================================
+       BOUTONS
+       ============================================================ */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+      font-family:var(--font-body);font-weight:700;
+      border-radius:var(--radius-btn);
+      padding:16px 28px;line-height:1.2;
+      transition:transform .25s var(--ease), box-shadow .25s var(--ease), filter .2s ease, border-color .25s ease;
+      text-align:center;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,var(--accent-hi),var(--accent));
+      color:#0A0A0B;
+      box-shadow:0 8px 24px rgba(214,178,74,.25);
+    }
+    .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.06);box-shadow:0 12px 34px rgba(214,178,74,.38)}
+    .btn-ghost{
+      border:1px solid var(--line);color:var(--text);background:transparent;
+      font-weight:600;
+    }
+    .btn-ghost:hover{border-color:rgba(214,178,74,.4);transform:translateY(-2px)}
+    .btn-lg{padding:19px 36px;font-size:1.0625rem}
+    .btn-block{width:100%}
+    :focus-visible{outline:2px solid var(--accent-hi);outline-offset:2px;border-radius:4px}
+
+    .cta-sub{display:block;color:var(--muted);font-size:.875rem;margin-top:.85rem;line-height:1.45}
+
+    /* ============================================================
+       NAV
+       ============================================================ */
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:50;
+      height:72px;display:flex;align-items:center;
+      transition:background .3s ease, border-color .3s ease, backdrop-filter .3s ease;
+      border-bottom:1px solid transparent;
+    }
+    .nav.scrolled{
+      background:rgba(10,10,11,.85);
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+    }
+    /* halo dore discret sous la barre */
+    .nav::after{
+      content:"";position:absolute;left:0;right:0;bottom:-40px;height:40px;
+      background:radial-gradient(60% 100% at 50% 0,rgba(214,178,74,.10),transparent 70%);
+      pointer-events:none;opacity:0;transition:opacity .3s ease;
+    }
+    .nav.scrolled::after{opacity:1}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .brand{
+      font-family:var(--font-display);font-weight:700;font-size:1.25rem;
+      letter-spacing:.02em;color:var(--text);
+    }
+    .brand b{
+      color:var(--accent-hi);font-weight:700;
+      border-bottom:2px solid var(--accent);padding-bottom:1px;
+    }
+    .nav-cta{padding:11px 20px;font-size:.9375rem}
+    .nav-cta small{display:none}
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero{padding-top:calc(72px + clamp(2.5rem,6vw,4.5rem))}
+    .hero::before{
+      content:"";position:absolute;top:-60px;right:-120px;width:640px;height:640px;max-width:90vw;
+      background:radial-gradient(circle,rgba(214,178,74,.16),transparent 62%);
+      filter:blur(120px);pointer-events:none;z-index:0;
+      animation:breathe 8s ease-in-out infinite alternate;
+    }
+    @keyframes breathe{from{transform:scale(1);opacity:.75}to{transform:scale(1.05);opacity:1}}
+    .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+    .hero h1{margin-bottom:1.3rem}
+    .hero-eyebrow{color:var(--muted);text-transform:none;letter-spacing:0;font-weight:500;font-size:.95rem}
+    .hero .lead{margin-bottom:1.6rem;max-width:36ch}
+    .hero-body{color:var(--muted);font-size:1rem;margin-bottom:2rem;max-width:52ch}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.9rem}
+    .mini-badge{
+      display:inline-flex;align-items:center;gap:.45rem;
+      font-size:.8rem;color:var(--muted);
+      border:1px solid var(--line);border-radius:999px;padding:.4rem .8rem;
+    }
+    .mini-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+    /* Placeholder image blocks */
+    .img-ph{
+      position:relative;border:1px solid var(--line);border-radius:14px;
+      background:
+        linear-gradient(135deg,rgba(214,178,74,.06),transparent 55%),
+        repeating-linear-gradient(45deg,var(--surface) 0 14px,var(--surface2) 14px 28px);
+      display:flex;align-items:center;justify-content:center;text-align:center;
+      color:var(--muted);font-size:.85rem;font-weight:500;padding:1rem;
+      overflow:hidden;
+    }
+    .img-ph span{position:relative;z-index:1;max-width:80%}
+    .img-ph .tag{
+      position:absolute;top:.7rem;left:.7rem;font-size:.68rem;text-transform:uppercase;
+      letter-spacing:.12em;color:var(--accent);border:1px solid rgba(214,178,74,.3);
+      border-radius:999px;padding:.2rem .55rem;background:rgba(10,10,11,.5);
+    }
+    .hero-portrait{
+      aspect-ratio:3/4;
+      border:1px solid rgba(214,178,74,.25);
+      box-shadow:0 20px 60px rgba(0,0,0,.5);
+    }
+
+    /* ============================================================
+       TRUST BAR
+       ============================================================ */
+    .trustbar{background:var(--surface);border-block:1px solid var(--line);padding-block:2.2rem}
+    .trustbar .head{text-align:center;margin-bottom:1.8rem}
+    .trustbar .head h2{font-size:clamp(1.5rem,3vw,2rem)}
+    .trustbar .head p{color:var(--muted);margin-top:.4rem}
+    .stats{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+      background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    }
+    .stat{background:var(--surface);padding:1.4rem 1rem;text-align:center}
+    .stat .num{font-family:var(--font-display);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);color:var(--accent-hi)}
+    .stat .lbl{color:var(--muted);font-size:.85rem;margin-top:.35rem}
+    .proofline{color:var(--muted);text-align:center;margin-top:1.6rem;font-size:.95rem}
+    .brandwall{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.8rem;margin-top:1.6rem}
+    .brandwall .img-ph{height:90px;font-size:.78rem}
+
+    /* ============================================================
+       PAIN
+       ============================================================ */
+    .pain h2 .gold{color:var(--accent-hi)}
+    .pain-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3rem);align-items:start;margin-top:2.2rem}
+    .pain-list{display:flex;flex-direction:column;gap:.85rem}
+    .line-card{
+      display:flex;gap:.9rem;align-items:flex-start;
+      background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.05rem 1.2rem;
+      transition:border-color .25s ease, transform .25s ease;
+    }
+    .line-card:hover{border-color:rgba(214,178,74,.4);transform:translateY(-2px)}
+    .line-card .ic{flex:0 0 auto;width:22px;height:22px;margin-top:2px;color:var(--accent)}
+    .line-card p{font-size:.98rem}
+
+    /* ============================================================
+       MECHANISM
+       ============================================================ */
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0 2.6rem}
+    .compare .box{border:1px solid var(--line);border-radius:14px;padding:1.4rem;background:var(--surface)}
+    .compare .box.no h4{color:var(--muted)}
+    .compare .box.yes{border-color:rgba(214,178,74,.35);background:linear-gradient(135deg,rgba(214,178,74,.06),transparent 60%)}
+    .compare h4{font-family:var(--font-display);font-size:1rem;margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.06em}
+    .compare .box.yes h4{color:var(--accent-hi)}
+    .compare p{font-size:.95rem;color:var(--muted)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1rem}
+    .step{border:1px solid var(--line);border-radius:14px;padding:1.5rem;background:var(--surface);transition:border-color .25s ease,transform .25s ease}
+    .step:hover{border-color:rgba(214,178,74,.4);transform:translateY(-4px)}
+    .step .no{
+      font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:#0A0A0B;
+      width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,var(--accent-hi),var(--accent));margin-bottom:1rem;
+    }
+    .step h4{font-family:var(--font-display);font-size:1.05rem;margin-bottom:.5rem}
+    .step p{color:var(--muted);font-size:.93rem}
+
+    /* ============================================================
+       PILIERS
+       ============================================================ */
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.4rem}
+    .pillar{
+      position:relative;border:1px solid var(--line);border-radius:var(--radius);
+      background:var(--surface);padding:2rem 1.7rem;overflow:hidden;
+      transition:border-color .25s ease,transform .25s ease;
+    }
+    .pillar:hover{border-color:rgba(214,178,74,.4);transform:translateY(-4px)}
+    .pillar .filno{
+      position:absolute;top:-.5rem;right:1rem;font-family:var(--font-display);font-weight:800;
+      font-size:4.5rem;color:rgba(244,239,230,.04);pointer-events:none;
+    }
+    .pillar.lead-pillar{border-color:rgba(214,178,74,.3)}
+    .pillar h3{margin-bottom:.7rem;position:relative}
+    .pillar p{color:var(--muted);font-size:.95rem;position:relative}
+    .pill-tag{
+      display:inline-block;margin-top:1.1rem;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;
+      color:var(--accent);border:1px solid rgba(214,178,74,.3);border-radius:999px;padding:.28rem .7rem;
+    }
+    .amf-note{color:var(--muted);font-size:.82rem;margin-top:.9rem;font-style:italic}
+    .disclaimer{
+      margin-top:1.8rem;border:1px solid var(--line);border-left:3px solid var(--accent-deep);
+      background:var(--surface);border-radius:10px;padding:1rem 1.2rem;
+      color:var(--muted);font-size:.85rem;line-height:1.55;
+    }
+
+    /* ============================================================
+       PREUVE — mur de preuve masonry
+       ============================================================ */
+    .proof-wall{columns:3;column-gap:1rem;margin-top:2.4rem}
+    .proof-wall .tile{break-inside:avoid;margin-bottom:1rem;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+    .proof-wall .img-ph{border:none;border-radius:0}
+    .proof-wall .tile.t1 .img-ph{height:220px}
+    .proof-wall .tile.t2 .img-ph{height:160px}
+    .proof-wall .tile.t3 .img-ph{height:190px}
+    .proof-wall .cap{padding:.7rem .9rem;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line)}
+    .badge-live{
+      display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;
+      color:var(--accent-hi);border:1px solid rgba(214,178,74,.3);border-radius:999px;padding:.25rem .6rem;
+    }
+    .dot-live{width:8px;height:8px;border-radius:50%;background:#e5484d;animation:pulse 1.5s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+    .proof-bullets{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2rem}
+    .check-line{display:flex;gap:.7rem;align-items:flex-start;color:var(--muted);font-size:.95rem}
+    .check-line .ic{flex:0 0 auto;width:20px;height:20px;color:var(--accent);margin-top:2px}
+
+    /* ============================================================
+       HISTOIRE
+       ============================================================ */
+    .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.6rem,4vw,3rem);align-items:center;margin-top:2rem}
+    .story-portrait{aspect-ratio:4/5;border:1px solid var(--line)}
+    .story p{color:var(--muted);margin-bottom:1.1rem}
+    .quote{
+      position:relative;border-left:3px solid var(--accent);padding:1.2rem 1.2rem 1.2rem 1.6rem;
+      margin:1.6rem 0;background:var(--surface);border-radius:0 12px 12px 0;overflow:hidden;
+    }
+    .quote::before{
+      content:"\201C";position:absolute;top:-1.4rem;right:.6rem;font-family:var(--font-display);
+      font-size:8rem;color:rgba(214,178,74,.10);pointer-events:none;line-height:1;
+    }
+    .quote p{font-family:var(--font-display);font-weight:600;font-size:1.15rem;color:var(--text);margin:0;position:relative;z-index:1;line-height:1.4}
+    .signature{font-family:var(--font-display);font-weight:700;color:var(--accent-hi);font-size:1.1rem;margin-top:1.4rem}
+
+    /* ============================================================
+       PAS POUR TOI
+       ============================================================ */
+    .dq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.2rem}
+    .dq-col{border:1px solid var(--line);border-radius:var(--radius);padding:1.7rem;background:var(--surface)}
+    .dq-col.yes{border-color:rgba(214,178,74,.3)}
+    .dq-col h3{font-size:1.15rem;margin-bottom:1.1rem;font-family:var(--font-display)}
+    .dq-col.no h3{color:var(--muted)}
+    .dq-col.yes h3{color:var(--accent-hi)}
+    .dq-col li{display:flex;gap:.7rem;align-items:flex-start;padding:.6rem 0;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+    .dq-col li:first-of-type{border-top:none}
+    .dq-col .mk{flex:0 0 auto;width:20px;height:20px;margin-top:2px}
+    .dq-col.no .mk{color:#7c7669}
+    .dq-col.yes .mk{color:var(--accent)}
+    .closing{text-align:center;font-family:var(--font-display);font-weight:600;font-size:clamp(1.2rem,3vw,1.6rem);color:var(--accent-hi);margin-top:2.4rem;max-width:40ch;margin-inline:auto}
+
+    /* ============================================================
+       APPEL
+       ============================================================ */
+    .call-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.6rem,4vw,3rem);align-items:center;margin-top:2rem}
+    .call-list{display:flex;flex-direction:column;gap:1.1rem}
+    .call-item{display:flex;gap:.9rem;align-items:flex-start}
+    .call-item .n{flex:0 0 auto;width:28px;height:28px;border-radius:50%;border:1px solid rgba(214,178,74,.4);color:var(--accent-hi);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:.85rem;font-weight:600}
+    .call-item p{color:var(--muted);font-size:.98rem}
+    .call-cta{border:1px solid var(--line);border-radius:var(--radius);padding:2rem;background:linear-gradient(160deg,var(--surface),var(--bg));text-align:center}
+
+    /* ============================================================
+       PRICING
+       ============================================================ */
+    .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.6rem;align-items:stretch}
+    .price{
+      position:relative;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);
+      padding:2rem 1.7rem;display:flex;flex-direction:column;
+      transition:border-color .25s ease,transform .25s ease;
+    }
+    .price:hover{border-color:rgba(214,178,74,.4);transform:translateY(-4px)}
+    .price.popular{
+      border:1.5px solid var(--accent);
+      background:linear-gradient(160deg,rgba(214,178,74,.06),var(--surface) 55%);
+      transform:translateY(-10px);
+      box-shadow:0 24px 60px rgba(0,0,0,.4);
+    }
+    .price.popular:hover{transform:translateY(-14px)}
+    .badge-pop{
+      position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+      background:linear-gradient(135deg,var(--accent-hi),var(--accent));color:#0A0A0B;
+      font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+      padding:.35rem .9rem;border-radius:999px;white-space:nowrap;
+    }
+    .price .dur{font-family:var(--font-display);font-weight:600;font-size:1.05rem;color:var(--text)}
+    .price .amt{font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,4vw,2.5rem);color:var(--accent-hi);margin:.6rem 0 .3rem;letter-spacing:-0.02em}
+    .price .amt .cur{font-size:1.1rem;font-weight:600;color:var(--accent)}
+    .price .tagline{color:var(--muted);font-size:.9rem;min-height:2.4em}
+    .price ul{margin:1.4rem 0;display:flex;flex-direction:column;gap:.65rem;flex:1}
+    .price li{display:flex;gap:.6rem;align-items:flex-start;font-size:.9rem;color:var(--muted)}
+    .price li .ck{flex:0 0 auto;width:18px;height:18px;color:var(--accent);margin-top:2px}
+    .price .btn{margin-top:auto}
+    .price-foot{text-align:center;color:var(--muted);font-size:.92rem;margin-top:2rem}
+
+    /* ============================================================
+       GARANTIE
+       ============================================================ */
+    .guarantee{background:var(--surface);border-block:1px solid var(--line);text-align:center;overflow:hidden}
+    .guarantee::before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(50% 120% at 50% 0,rgba(214,178,74,.10),transparent 60%);
+      pointer-events:none;
+    }
+    .seal{
+      width:120px;height:120px;border-radius:50%;border:1px solid rgba(214,178,74,.5);
+      display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+      margin:0 auto 1.6rem;color:var(--accent-hi);font-family:var(--font-display);
+      background:radial-gradient(circle,rgba(214,178,74,.05),transparent 70%);
+    }
+    .seal .big{font-size:1.7rem;font-weight:800;line-height:1}
+    .seal .sm{font-size:.65rem;text-transform:uppercase;letter-spacing:.14em;margin-top:.3rem;color:var(--accent)}
+    .guarantee .body-text{margin-inline:auto;text-align:center}
+    .credo{font-family:var(--font-display);font-weight:600;color:var(--text);font-size:1.05rem;margin-top:1.2rem;max-width:50ch;margin-inline:auto}
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq-wrap{max-width:760px;margin-inline:auto}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-q{
+      width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+      padding:1.3rem .4rem;text-align:left;font-family:var(--font-body);font-weight:600;font-size:1.03rem;color:var(--text);
+      transition:color .2s ease;
+    }
+    .faq-q:hover{color:var(--accent-hi)}
+    .faq-icon{flex:0 0 auto;width:22px;height:22px;color:var(--accent);transition:transform .3s var(--ease);font-family:var(--font-display);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+    .faq-item[aria-expanded="true"] .faq-icon{transform:rotate(45deg)}
+    .faq-a{overflow:hidden;max-height:0;transition:max-height .35s var(--ease)}
+    .faq-a-inner{padding:0 .4rem 1.4rem;color:var(--muted);font-size:.97rem;line-height:1.6}
+    .faq-item[aria-expanded="true"]{background:linear-gradient(180deg,rgba(16,16,19,.6),transparent)}
+
+    /* ============================================================
+       FINAL PUSH + CTA
+       ============================================================ */
+    .finalpush{text-align:center}
+    .finalpush h2 .gold{color:var(--accent-hi)}
+    .finalpush .lead{margin-inline:auto;max-width:48ch}
+    .finalpush .body-text{margin-inline:auto;text-align:center;margin-top:1.4rem}
+
+    .finalcta{text-align:center;overflow:hidden}
+    .finalcta::before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(50% 80% at 50% 50%,rgba(214,178,74,.14),transparent 65%);
+      pointer-events:none;
+    }
+    .finalcta .inner{position:relative;z-index:1;max-width:44rem;margin-inline:auto}
+    .finalcta h2{margin-bottom:1rem}
+    .finalcta .lead{margin-inline:auto;margin-bottom:1.8rem}
+    .final-proof{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.6rem}
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer{background:var(--bg);border-top:1px solid var(--line);padding-block:3rem 2.2rem}
+    .footer-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.6rem;align-items:flex-start}
+    .footer .brand{font-size:1.4rem}
+    .footer-tag{color:var(--muted);font-size:.95rem;margin-top:.5rem;max-width:34ch}
+    .footer-links{display:flex;flex-wrap:wrap;gap:1.2rem;font-size:.9rem;color:var(--muted)}
+    .footer-links a:hover{color:var(--accent-hi)}
+    .footer-disc{
+      margin-top:2.2rem;padding-top:1.6rem;border-top:1px solid var(--line);
+      color:var(--muted);font-size:.8rem;line-height:1.6;
+    }
+    .footer-copy{color:var(--muted);font-size:.82rem;margin-top:1.4rem}
+
+    /* ============================================================
+       REVEALS (IntersectionObserver) — degradation gracieuse
+       ============================================================ */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+    /* si JS absent : tout reste visible */
+    .no-js .reveal{opacity:1;transform:none}
+
+    /* ============================================================
+       MOBILE MENU
+       ============================================================ */
+    .burger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+    .burger span{display:block;width:22px;height:2px;background:var(--text);position:relative;transition:.3s var(--ease)}
+    .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--text);transition:.3s var(--ease)}
+    .burger span::before{top:-7px}.burger span::after{top:7px}
+    .burger[aria-expanded="true"] span{background:transparent}
+    .burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+    .burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+    .mobile-menu{
+      position:fixed;inset:72px 0 auto 0;z-index:49;
+      background:rgba(10,10,11,.97);backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
+      transform:translateY(-120%);transition:transform .35s var(--ease);
+      padding:1.5rem clamp(1.15rem,4vw,2rem) 2rem;
+    }
+    .mobile-menu.open{transform:translateY(0)}
+    .mobile-menu a{display:block;padding:.9rem 0;color:var(--muted);border-bottom:1px solid var(--line);font-weight:500}
+    .mobile-menu a:last-of-type{border-bottom:none}
+    .mobile-menu .btn{margin-top:1.2rem}
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width:960px){
+      .hero .wrap{grid-template-columns:1fr}
+      .hero-media{order:-1;max-width:340px}
+      .hero::before{right:-40vw}
+      .pain-grid,.story-grid,.call-grid{grid-template-columns:1fr}
+      .story-portrait{max-width:360px}
+      .pillars{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .proof-wall{columns:2}
+      .prices{grid-template-columns:1fr;gap:1.6rem}
+      .price.popular{transform:none;order:-1}
+      .price.popular:hover{transform:translateY(-4px)}
+      .compare{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-cta{padding:10px 15px;font-size:.85rem}
+      .burger{display:flex}
+      .nav .nav-cta.desktop{display:none}
+      .stats{grid-template-columns:1fr 1fr}
+      .dq-grid{grid-template-columns:1fr}
+      .proof-bullets{grid-template-columns:1fr}
+      .proof-wall{columns:1}
+      .hero-actions .btn{width:100%}
+      .footer-top{flex-direction:column}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *{animation:none !important}
+      html{scroll-behavior:auto}
+      .reveal{opacity:1 !important;transform:none !important;transition:none}
+      .btn:hover,.step:hover,.pillar:hover,.price:hover,.line-card:hover{transform:none}
+    }
+  </style>
+</head>
+<body class="no-js">
+
+  <!-- ============================================================
+       NAV STICKY — un seul element cliquable de conversion
+       ============================================================ -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a href="#hero" class="brand" aria-label="BERAT accueil"><b>B</b>ERAT</a>
+
+      <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+      <a class="btn btn-primary nav-cta desktop" data-cta href="https://calendly.com/berat/appel-opportunite">
+        Reserver mon appel gratuit
+      </a>
+
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu principal">
+    <a href="#preuve">Les preuves</a>
+    <a href="#piliers">Ce que tu construis</a>
+    <a href="#formules">Les formules</a>
+    <a href="#faq">FAQ</a>
+    <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+    <a class="btn btn-primary btn-block" data-cta href="https://calendly.com/berat/appel-opportunite">Reserver mon appel gratuit</a>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow reveal">Pour ceux qui veulent comprendre le business en ligne, sans se faire avoir.</p>
+          <h1 class="reveal"><span class="gold">2</span> nouvelles sources de revenus en <span class="gold">90 jours</span>. <span class="gold">Prouve</span>, pas promis.</h1>
+          <p class="lead reveal">UGC, IA et Investissement comme une competence. Pas une enieme formation : un accompagnement sur-mesure, entoure des bonnes personnes.</p>
+          <p class="hero-body reveal">Ex-ingenieur production chez Renault. Aujourd'hui, formateur de +500 personnes en 2 ans et responsable formation IA dans un reseau de 5 000. Je t'aide a batir 2 nouvelles sources de revenus : la creation de contenu pour les marques (UGC), l'IA, et l'investissement comme une competence qui s'apprend. Entoure de gens qui avancent vraiment, pas de vendeurs de reve. L'environnement bat la genetique. Et honnetement : ce n'est pas pour tout le monde. L'appel de 30 min sert justement a le verifier. Si ce n'est pas pour toi, tu repars quand meme avec un plan clair.</p>
+
+          <div class="hero-actions reveal">
+            <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+            <a class="btn btn-primary btn-lg" data-cta href="https://calendly.com/berat/appel-opportunite">Reserver mon appel de qualification (30 min, gratuit)</a>
+            <a class="btn btn-ghost" href="#preuve">Voir les preuves</a>
+          </div>
+          <span class="cta-sub reveal">Appel de qualification, pas de vente forcee. Zero engagement.</span>
+
+          <div class="hero-badges reveal">
+            <span class="mini-badge">+500 accompagnes</span>
+            <span class="mini-badge">Garantie 7 jours</span>
+            <span class="mini-badge">Selection reelle</span>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="img-ph hero-portrait" data-img="portrait-pro-berat">
+            <span class="tag">Emplacement</span>
+            <span>Ta photo pro ici<br><small style="color:#6f6a5f">Portrait pro de Berat (action / lifestyle)</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TRUST BAR
+         ============================================================ -->
+    <section class="trustbar" id="trust" aria-label="La preuve avant la promesse">
+      <div class="wrap">
+        <div class="head reveal">
+          <h2>La preuve avant la promesse</h2>
+          <p>Des faits verifiables, pas des adjectifs. Ne me crois pas sur parole. Regarde.</p>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><div class="num">+500</div><div class="lbl">accompagnes en 2 ans</div></div>
+          <div class="stat"><div class="num">5 000</div><div class="lbl">reseau (formation IA)</div></div>
+          <div class="stat"><div class="num">4 ans</div><div class="lbl">ingenieur Renault</div></div>
+          <div class="stat"><div class="num">7 jours</div><div class="lbl">satisfait ou rembourse</div></div>
+        </div>
+
+        <ul class="proof-bullets reveal" style="margin-top:1.8rem">
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>+500 personnes accompagnees en 2 ans</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Mise en relation directe avec les marques (UGC)</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Responsable formation IA d'un reseau de 5 000 personnes</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Ex-ingenieur production chez Renault, 4 ans</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Live TikTok de trading en transparence totale</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Garantie 7 jours satisfait ou rembourse</li>
+        </ul>
+
+        <div class="brandwall reveal" aria-label="Mur de preuve : logos et flyers clients">
+          <div class="img-ph" data-img="logo-marque-1"><span>Logo marque</span></div>
+          <div class="img-ph" data-img="logo-marque-2"><span>Logo marque</span></div>
+          <div class="img-ph" data-img="flyer-client-1"><span>Flyer succes client</span></div>
+          <div class="img-ph" data-img="flyer-client-2"><span>Flyer succes client</span></div>
+          <div class="img-ph" data-img="logo-marque-3"><span>Logo marque</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROBLEME (pain / PAS)
+         ============================================================ -->
+    <section class="pain" id="probleme">
+      <div class="wrap">
+        <p class="eyebrow reveal">Sois honnete avec toi une minute.</p>
+        <h2 class="reveal section-head"><span class="gold">12</span> paies par an. Mais <span class="gold">100</span> depenses dans le mois.</h2>
+        <p class="lead reveal" style="margin-top:1rem">Une seule source de revenus, c'est une seule corde a laquelle tu es suspendu.</p>
+
+        <div class="pain-grid">
+          <p class="body-text reveal">Tu echanges 100 % de ton temps contre un seul salaire. Ton temps ne t'appartient pas. Les factures tombent, elles, sans jamais te demander ton avis. Autour de toi, un environnement qui te tire vers le bas plus qu'il ne te pousse. Tu sens que tu as plus en toi, un potentiel que personne n'exploite. Mais entre ce que tu sens et ce que tu fais : <span class="gold">0</span> passage a l'action. Pas par manque de volonte. Par manque d'infos claires et de gens credibles a qui te fier. Le vrai risque, ce n'est pas d'essayer et de te tromper. C'est de rester dans la meme case toute ta vie, en te disant chaque annee que tu commenceras l'annee prochaine.</p>
+
+          <ul class="pain-list">
+            <li class="line-card reveal"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><p>Un seul salaire, et il file avant la fin du mois</p></li>
+            <li class="line-card reveal"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><p>Un entourage qui juge au lieu de soutenir</p></li>
+            <li class="line-card reveal"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg><p>Un potentiel que tu sens, mais que tu n'exploites pas</p></li>
+            <li class="line-card reveal"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg><p>Deja essaye seul (dropshipping, crypto...) et abandonne, faute d'environnement</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MECANISME
+         ============================================================ -->
+    <section class="mechanism" id="mecanisme" style="background:var(--surface);border-block:1px solid var(--line)">
+      <div class="wrap">
+        <p class="eyebrow reveal">Un leader ne montre jamais le probleme sans donner la solution.</p>
+        <h2 class="reveal section-head">L'environnement bat la genetique</h2>
+        <p class="lead reveal" style="margin-top:1rem">Ce qui te manque, ce n'est pas la volonte. C'est le bon systeme et le bon cercle.</p>
+        <p class="body-text reveal" style="margin-top:1.2rem">Tu n'as pas echoue parce que tu es nul. Tu as echoue parce que tu etais seul : sans reseau, sans suivi, sans vraies opportunites. Personne ne demarre bon. On le devient dans le bon environnement. C'est exactement ce que je construis : un systeme eprouve, plus les bonnes personnes autour de toi. Concretement, ca tient en 3 etapes simples.</p>
+
+        <div class="compare">
+          <div class="box no reveal">
+            <h4>Ce que ce n'est PAS</h4>
+            <p>Une video de plus a regarder seul, dans ton coin, sans suivi ni retour.</p>
+          </div>
+          <div class="box yes reveal">
+            <h4>Ce que c'est</h4>
+            <p>Accompagnement + reseau + mise en relation reelle avec les marques.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="no">1</div>
+            <h4>On branche l'environnement</h4>
+            <p>Tu entres dans le reseau, les sessions live et un suivi perso. Tu arretes d'avancer seul.</p>
+          </div>
+          <div class="step reveal">
+            <div class="no">2</div>
+            <h4>On active la 1re source (UGC)</h4>
+            <p>Tu crees du contenu pour les marques, et je te mets en relation reelle avec elles. C'est concret, verifiable, ca paie.</p>
+          </div>
+          <div class="step reveal">
+            <div class="no">3</div>
+            <h4>On empile une 2e source (IA + Investissement)</h4>
+            <p>Les competences IA qui font la difference aujourd'hui, et l'investissement appris comme une competence. Objectif : au moins 2 nouvelles sources de revenus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PILIERS
+         ============================================================ -->
+    <section class="pillars-sec" id="piliers">
+      <div class="wrap">
+        <p class="eyebrow reveal">Ce que tu construis vraiment</p>
+        <h2 class="reveal section-head">3 piliers, 2 sources de revenus</h2>
+        <p class="lead reveal" style="margin-top:1rem">On mene par le plus concret et le plus verifiable. Le reste vient se poser dessus.</p>
+        <p class="body-text reveal" style="margin-top:1.2rem">L'objectif n'est pas de tout faire d'un coup. C'est de batir au moins 2 nouvelles sources de revenus, dans le bon ordre, en commencant par la plus prouvable.</p>
+
+        <div class="pillars">
+          <article class="pillar lead-pillar reveal">
+            <span class="filno">01</span>
+            <h3>UGC <small style="font-size:.7rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase">point d'entree</small></h3>
+            <p>Cree du contenu pour les marques. Je suis ta mise en relation reelle avec elles. C'est ce que +500 personnes font deja.</p>
+            <span class="pill-tag">Le plus prouvable</span>
+          </article>
+
+          <article class="pillar reveal">
+            <span class="filno">02</span>
+            <h3>IA</h3>
+            <p>Les competences qui font la difference aujourd'hui, expliquees et mises en pratique dans un reseau de 5 000 personnes.</p>
+            <span class="pill-tag">Competence 2026</span>
+          </article>
+
+          <article class="pillar reveal">
+            <span class="filno">03</span>
+            <h3>Investissement</h3>
+            <p>Une competence qui s'apprend, jamais une promesse de gains. Aborde avec retenue, apres l'UGC.</p>
+            <span class="pill-tag">Competence</span>
+            <p class="amf-note">*voir mentions AMF ci-dessous</p>
+          </article>
+        </div>
+
+        <p class="disclaimer reveal" role="note">
+          <strong>Mentions AMF :</strong> L'investissement comporte des risques de perte en capital. Les resultats passes ne prejugent pas des resultats futurs. Aucun revenu n'est garanti.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PREUVE — mur de preuve
+         ============================================================ -->
+    <section class="proof" id="preuve" style="background:var(--surface);border-block:1px solid var(--line)">
+      <div class="wrap">
+        <p class="eyebrow reveal">Regarde, ne me crois pas sur parole.</p>
+        <h2 class="reveal section-head">Des resultats affiches, un live que tu peux verifier</h2>
+        <p class="lead reveal" style="margin-top:1rem">Un vendeur de reve promet et disparait. Moi, je montre, et je reste.</p>
+        <p class="body-text reveal" style="margin-top:1.2rem">La difference entre une promesse et une preuve, c'est que la preuve, tu peux la verifier toi-meme. Alors voila ce qui est sur la table, en transparence totale.</p>
+
+        <!-- Mur de preuve masonry : flyers clients, live, badges -->
+        <div class="proof-wall">
+          <div class="tile t1 reveal">
+            <div class="img-ph" data-img="flyer-collab-ugc-1"><span class="tag">Flyer</span><span>Flyer succes client<br><small style="color:#6f6a5f">Collaboration UGC #1</small></span></div>
+            <div class="cap">Collaboration UGC affichee — 1 marque</div>
+          </div>
+          <div class="tile t2 reveal">
+            <div class="img-ph" data-img="flyer-collab-ugc-10"><span>Flyer succes client<br><small style="color:#6f6a5f">10 marques</small></span></div>
+            <div class="cap">Collaborations UGC — 10 marques</div>
+          </div>
+          <div class="tile t1 reveal">
+            <div class="img-ph" data-img="extrait-live-trading"><span class="badge-live" style="position:absolute;top:.7rem;left:.7rem"><span class="dot-live"></span>En direct</span><span>Extrait live trading<br><small style="color:#6f6a5f">Live TikTok, transparence totale</small></span></div>
+            <div class="cap">Live TikTok de trading — verifiable en direct</div>
+          </div>
+          <div class="tile t3 reveal">
+            <div class="img-ph" data-img="flyer-collab-ugc-25"><span>Flyer succes client<br><small style="color:#6f6a5f">25 marques</small></span></div>
+            <div class="cap">Collaborations UGC — 25 marques</div>
+          </div>
+          <div class="tile t2 reveal">
+            <div class="img-ph" data-img="badge-formation-ia"><span>Responsable formation IA<br><small style="color:#6f6a5f">Reseau de 5 000 personnes</small></span></div>
+            <div class="cap">Responsable formation IA — reseau 5 000</div>
+          </div>
+          <div class="tile t3 reveal">
+            <div class="img-ph" data-img="flyer-collab-ugc-50"><span>Flyer succes client<br><small style="color:#6f6a5f">50 marques</small></span></div>
+            <div class="cap">Collaborations UGC — 50 marques</div>
+          </div>
+          <div class="tile t2 reveal">
+            <div class="img-ph" data-img="photos-reseau"><span>Photos du reseau<br><small style="color:#6f6a5f">La communaute en action</small></span></div>
+            <div class="cap">Le reseau — evenements et sessions</div>
+          </div>
+        </div>
+
+        <ul class="proof-bullets reveal">
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>+500 personnes accompagnees en 2 ans, dont des debutants et des salaries partis de zero</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Collaborations UGC affichees : 1, 10, 25, 50 marques</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Un live TikTok de trading en direct : rien de cache, tu verifies par toi-meme</li>
+          <li class="check-line"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Responsable formation IA d'un reseau de 5 000 personnes</li>
+        </ul>
+
+        <p class="disclaimer reveal" role="note">
+          <strong>Mentions AMF :</strong> Les chiffres lies au trading sont presentes uniquement comme illustrations d'une competence, jamais comme des gains attendus. L'investissement comporte des risques de perte en capital. Les resultats passes ne prejugent pas des resultats futurs. Aucun revenu n'est garanti.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HISTOIRE
+         ============================================================ -->
+    <section class="story" id="histoire">
+      <div class="wrap">
+        <p class="eyebrow reveal">Qui est Berat</p>
+        <div class="story-grid">
+          <div class="reveal">
+            <div class="img-ph story-portrait" data-img="photo-berat-lifestyle"><span class="tag">Emplacement</span><span>Ta photo pro ici<br><small style="color:#6f6a5f">Portrait / action — passe sports de combat</small></span></div>
+          </div>
+          <div class="story">
+            <h2 class="reveal" style="margin-bottom:.8rem">Je ne suis pas un gourou anonyme derriere un ecran</h2>
+            <p class="lead reveal" style="margin-bottom:1.4rem">Ingenieur de formation. 4 ans en production chez <strong>Renault</strong>. La rigueur scientifique, je l'applique au business.</p>
+            <p class="reveal">J'ai toujours senti que je pouvais faire plus, sans plafond : dans les etudes, dans le sport, puis dans le business. J'ai quitte le confort d'un poste d'ingenieur parce que dependre d'une seule source de revenus, ce n'etait pas une vie libre. En 2 ans, j'ai accompagne <strong>+500 personnes</strong> en UGC et je suis devenu responsable formation IA d'un reseau de <strong>5 000</strong>.</p>
+            <p class="reveal">Aujourd'hui, j'aide ceux qui n'arrivent pas a faire le premier pas pour eux-memes. Mon role, ce n'est pas de vendre une formation. C'est de batir des humains et de les entourer. Et j'ai une regle que je ne casse jamais : je ne sacrifierai jamais une relation pour une vente.</p>
+
+            <blockquote class="quote reveal">
+              <p>Les petites visions ne peuvent pas comprendre les plus grandes. Mais les grandes visions peuvent comprendre les plus petites.</p>
+            </blockquote>
+            <p class="signature reveal">L'environnement bat la genetique.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PAS POUR TOI
+         ============================================================ -->
+    <section class="dq" id="pas-pour-toi" style="background:var(--surface);border-block:1px solid var(--line)">
+      <div class="wrap">
+        <p class="eyebrow reveal">On va se dire les choses</p>
+        <h2 class="reveal section-head">Ce n'est pas pour tout le monde</h2>
+        <p class="lead reveal" style="margin-top:1rem">Je ne prends pas tout le monde. Et c'est exactement ce qui devrait te rassurer.</p>
+        <p class="body-text reveal" style="margin-top:1.2rem">Un vendeur de reve dit oui a tout le monde. Moi, non. Environ 1 personne sur 2 qui fait l'appel demarre. Si je te dis oui, ce n'est pas pour te vendre : c'est parce que je vois concretement que ca peut marcher pour ton profil. Ferme cette page si tu te reconnais ici.</p>
+
+        <div class="dq-grid">
+          <div class="dq-col no reveal">
+            <h3>Ce n'est PAS pour toi si...</h3>
+            <ul>
+              <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Tu cherches un bouton magique et du revenu passif sans effort</li>
+              <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Tu attends qu'on te motive de force tous les matins</li>
+              <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Tu n'as vraiment aucune heure par semaine a investir sur toi</li>
+            </ul>
+          </div>
+          <div class="dq-col yes reveal">
+            <h3>C'est pour toi si...</h3>
+            <ul>
+              <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tu as encore du temps a investir sur toi et tu es pret a bosser, meme salarie</li>
+              <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tu veux COMPRENDRE le business en ligne, pas juste consommer une enieme formation</li>
+              <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tu veux entrer dans un cercle de gens qui te tirent vers le haut</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="closing reveal">La vraie question n'est pas "est-ce pour moi" mais "suis-je pret a bosser".</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         APPEL
+         ============================================================ -->
+    <section class="call" id="appel">
+      <div class="wrap">
+        <p class="eyebrow reveal">Avant de parler prix, parlons de l'appel</p>
+        <h2 class="reveal section-head">Ce qui se passe pendant les 30 minutes</h2>
+        <p class="lead reveal" style="margin-top:1rem">Un appel de qualification, pas un tunnel de vente.</p>
+
+        <div class="call-grid">
+          <div>
+            <p class="body-text reveal" style="margin-bottom:1.6rem">Tu repars avec de la valeur, meme si on ne travaille pas ensemble. C'est ma regle de reciprocite : je ne te fais pas perdre ton temps. Voila le deroule, sans surprise.</p>
+            <ul class="call-list">
+              <li class="call-item reveal"><span class="n">1</span><p>On decortique ensemble ta situation, ton probleme et ton besoin reel</p></li>
+              <li class="call-item reveal"><span class="n">2</span><p>Je te donne un diagnostic clair et un plan d'action concret, adapte a ton profil</p></li>
+              <li class="call-item reveal"><span class="n">3</span><p>Je suis 100 % honnete sur le fit : si ce n'est pas pour toi, je te le dis en face et je te donne quoi faire pour te qualifier</p></li>
+              <li class="call-item reveal"><span class="n">4</span><p>Zero pression : je cherche des gens deja prets a bosser, pas des gens a convaincre de force</p></li>
+            </ul>
+          </div>
+
+          <div class="call-cta reveal">
+            <div class="seal" style="margin-bottom:1.4rem"><span class="big" style="font-size:1.4rem">GRATUIT</span><span class="sm">30 minutes</span></div>
+            <h3 style="margin-bottom:1rem">Reserve ton creneau</h3>
+            <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+            <a class="btn btn-primary btn-lg btn-block" data-cta href="https://calendly.com/berat/appel-opportunite">Reserver mon appel de qualification (30 min, gratuit)</a>
+            <span class="cta-sub">Gratuit. 30 min. Tu repars avec un plan clair, meme sans achat.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FORMULES (pricing)
+         ============================================================ -->
+    <section class="pricing" id="formules" style="background:var(--surface);border-block:1px solid var(--line)">
+      <div class="wrap">
+        <p class="eyebrow reveal">Les prix, affiches noir sur blanc</p>
+        <h2 class="reveal section-head">3 formules. Tu choisis avec moi sur l'appel.</h2>
+        <p class="lead reveal" style="margin-top:1rem">Un arnaqueur cache son prix. Moi je te le montre avant meme que tu reserves.</p>
+        <p class="body-text reveal" style="margin-top:1.2rem">On definit ensemble la bonne formule pendant l'appel, selon ton profil et ton rythme. Aucun engagement a reserver. Et rappelle-toi : ce qui coute vraiment cher, ce n'est pas d'investir sur toi. C'est de finir l'annee avec 0 source de revenus en plus et les memes factures.</p>
+
+        <div class="prices">
+          <!-- 3 mois -->
+          <article class="price reveal">
+            <div class="dur">3 mois</div>
+            <div class="amt">629,97<span class="cur"> EUR</span></div>
+            <p class="tagline">Pour demarrer et poser les fondations.</p>
+            <ul>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Acces au reseau</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Sessions live</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Contenus &amp; formations</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Suivi perso</li>
+            </ul>
+            <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+            <a class="btn btn-ghost btn-block" data-cta href="https://calendly.com/berat/appel-opportunite">En parler sur l'appel gratuit</a>
+          </article>
+
+          <!-- 6 mois — populaire -->
+          <article class="price popular reveal">
+            <span class="badge-pop">Le plus populaire</span>
+            <div class="dur">6 mois</div>
+            <div class="amt">1&nbsp;319,93<span class="cur"> EUR</span></div>
+            <p class="tagline">Le bon equilibre pour installer 2 sources de revenus durablement.</p>
+            <ul>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tout le pack 3 mois</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Opportunites business</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Mise en relation marques (UGC)</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Developpement perso</li>
+            </ul>
+            <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+            <a class="btn btn-primary btn-block" data-cta href="https://calendly.com/berat/appel-opportunite">En parler sur l'appel gratuit</a>
+          </article>
+
+          <!-- 12 mois -->
+          <article class="price reveal">
+            <div class="dur">12 mois</div>
+            <div class="amt">2&nbsp;339,87<span class="cur"> EUR</span></div>
+            <p class="tagline">Accompagnement complet pour aller au bout de la transformation.</p>
+            <ul>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Tout le pack 6 mois</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Suivi perso renforce</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Opportunites prioritaires</li>
+              <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Accompagnement sur 2 sources</li>
+            </ul>
+            <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+            <a class="btn btn-ghost btn-block" data-cta href="https://calendly.com/berat/appel-opportunite">En parler sur l'appel gratuit</a>
+          </article>
+        </div>
+
+        <p class="price-foot reveal">On choisit ensemble. Sans engagement. <span class="gold">Garantie 7 jours.</span> L'appel est gratuit, sans engagement.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GARANTIE
+         ============================================================ -->
+    <section class="guarantee" id="garantie">
+      <div class="wrap" style="position:relative;z-index:1;max-width:44rem;text-align:center">
+        <p class="eyebrow reveal">Le risque est de mon cote</p>
+        <div class="seal reveal"><span class="big">7</span><span class="sm">jours satisfait ou rembourse</span></div>
+        <h2 class="reveal">Garantie 7 jours satisfait ou rembourse</h2>
+        <p class="lead reveal" style="margin:1rem auto 1.4rem">Tu testes. Si ce n'est pas pour toi, tu recuperes ton argent.</p>
+        <p class="body-text reveal">Je ne prends pas de risque avec ta confiance, donc je le prends a ta place. Comme je selectionne a l'entree, je ne prends pas les profils qui vont echouer : ce ne serait bon ni pour toi, ni pour ma reputation. Je ne sacrifie jamais une relation pour une vente.</p>
+        <p class="credo reveal">"Un leader ne montre jamais le probleme sans donner la solution" — y compris le tien.</p>
+        <div class="hero-actions reveal" style="justify-content:center;margin-top:2rem">
+          <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+          <a class="btn btn-primary btn-lg" data-cta href="https://calendly.com/berat/appel-opportunite">Reserver mon appel gratuit</a>
+        </div>
+        <span class="cta-sub reveal">Garantie 7 jours . Selection reelle . 30 min</span>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ (accordeon)
+         ============================================================ -->
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <p class="eyebrow reveal" style="text-align:center;display:block">Tes questions, mes reponses directes</p>
+        <h2 class="reveal" style="text-align:center">On repond a ce qui te retient vraiment</h2>
+        <p class="lead reveal" style="text-align:center;margin:1rem auto 2.6rem;max-width:44ch">Pas de langue de bois. Voila les vraies objections, traitees en face.</p>
+
+        <div class="faq-wrap">
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa1"><span>"C'est pas pour moi."</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa1"><div class="faq-a-inner">Peut-etre. L'appel sert justement a le verifier. La vraie question n'est pas "est-ce pour moi", mais "suis-je pret a bosser". +500 personnes ont commence en se disant la meme chose.</div></div>
+          </div>
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa2"><span>"Encore une formation."</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa2"><div class="faq-a-inner">Non. Une formation qu'on regarde seul, on l'abandonne a 90 %. Ici, c'est un accompagnement : reseau, sessions live, suivi perso, et surtout mise en relation reelle avec des marques qui paient.</div></div>
+          </div>
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa3"><span>"J'ai pas le temps."</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa3"><div class="faq-a-inner">Tu n'as pas le temps justement parce que tu depends d'une seule source. L'appel, c'est 30 min. Et si tu n'as vraiment aucune heure par semaine a investir sur toi, je te le dirai honnetement.</div></div>
+          </div>
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa4"><span>"J'ai pas d'argent."</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa4"><div class="faq-a-inner">L'appel est gratuit et sans engagement. Le manque d'argent, c'est precisement le probleme qu'on vient regler, pas une raison de ne pas en parler.</div></div>
+          </div>
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa5"><span>"Encore un vendeur de reve."</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa5"><div class="faq-a-inner">Un vendeur de reve promet et disparait. Moi je montre : live en direct, flyers clients, +500 accompagnes, et une garantie 7 jours. Regarde les preuves, decide ensuite.</div></div>
+          </div>
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa6"><span>"Et si ca ne marche pas pour moi ?"</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa6"><div class="faq-a-inner">C'est pour ca que l'appel est une qualification, pas un closing. Si je vois que ca ne peut pas marcher pour ton profil, je te le dis, et je te donne quoi faire.</div></div>
+          </div>
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa7"><span>"L'investissement, c'est risque."</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa7"><div class="faq-a-inner">Tu as raison d'etre prudent. Ici c'est une competence qu'on apprend, jamais un revenu garanti. Le point d'entree reste l'UGC. Transparence totale : perte en capital possible, aucun revenu garanti.</div></div>
+          </div>
+          <div class="faq-item reveal" aria-expanded="false">
+            <button class="faq-q" aria-controls="fa8"><span>"Je suis deja salarie, je verrai plus tard."</span><span class="faq-icon" aria-hidden="true">+</span></button>
+            <div class="faq-a" id="fa8"><div class="faq-a-inner">"Plus tard", c'est le mot qui te garde dans la meme case pendant 10 ans. Le meilleur moment pour poser la question, c'est maintenant. Sans faux compte a rebours.</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         COUT DE L'INACTION (final push)
+         ============================================================ -->
+    <section class="finalpush" id="cout-inaction" style="background:var(--surface);border-block:1px solid var(--line)">
+      <div class="wrap" style="max-width:46rem">
+        <p class="eyebrow reveal">Projette-toi 12 mois plus loin</p>
+        <h2 class="reveal">Meme case, ou nouveau cercle ?</h2>
+        <p class="lead reveal" style="margin:1rem auto 0">Dans un an, tu peux avoir <span class="gold">2 sources</span> de revenus en plus et un entourage qui te tire vers le haut. Ou exactement la meme situation qu'aujourd'hui.</p>
+        <p class="body-text reveal">Rester pour ne pas deranger ceux qui te freinent, c'est le vrai cout. Raviver un reve mis de cote par le travail et un environnement nocif, ca ne commence pas par un grand saut. Ca commence par un appel de <span class="gold">30 minutes</span>.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA FINAL
+         ============================================================ -->
+    <section class="finalcta" id="cta-final">
+      <div class="wrap inner">
+        <p class="eyebrow reveal">Il reste une action a faire</p>
+        <h2 class="reveal">Reserve ton appel de qualification</h2>
+        <p class="lead reveal">Places limitees : je selectionne sur candidature, pas au premier venu.</p>
+        <p class="body-text reveal" style="margin:0 auto 1.8rem;text-align:center">Un seul chemin. Un seul objectif : verifier ensemble, en 30 minutes, si tu es fait pour ca. Si oui, on batit. Si non, tu repars avec un plan clair. Dans les deux cas, tu ne perds rien.</p>
+
+        <div class="hero-actions reveal" style="justify-content:center">
+          <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+          <a class="btn btn-primary btn-lg" data-cta href="https://calendly.com/berat/appel-opportunite">Reserver mon appel de qualification (30 min, gratuit)</a>
+        </div>
+        <span class="cta-sub reveal">Gratuit . 30 min . Appel de qualification, pas de vente forcee . Garantie 7 jours</span>
+
+        <div class="final-proof reveal">
+          <span class="mini-badge">+500 accompagnes</span>
+          <span class="mini-badge">Garantie 7 jours</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" id="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div>
+          <div class="brand"><b>B</b>ERAT</div>
+          <p class="footer-tag">Comprendre le business en ligne, sans se faire avoir. Accompagnement sur-mesure : UGC, IA et investissement comme competence.</p>
+        </div>
+        <div style="text-align:right">
+          <!-- REMPLACER: lien de reservation Calendly/Cal.com -->
+          <a class="btn btn-primary" data-cta href="https://calendly.com/berat/appel-opportunite">Reserver mon appel gratuit</a>
+          <nav class="footer-links" style="margin-top:1.2rem;justify-content:flex-end" aria-label="Liens legaux">
+            <a href="#">Mentions legales</a>
+            <a href="#">Conditions generales</a>
+            <a href="#">Politique de confidentialite</a>
+            <a href="#">Contact</a>
+          </nav>
+        </div>
+      </div>
+
+      <p class="footer-disc">
+        L'investissement comporte des risques de perte en capital. Les resultats passes ne prejugent pas des resultats futurs. Aucun revenu n'est garanti. Les elements presentes (collaborations, resultats clients, illustrations liees a l'investissement) refletent des situations individuelles et ne constituent ni une promesse de gains, ni un conseil en investissement. L'investissement est aborde comme une competence qui s'apprend. BERAT propose un accompagnement a la creation de contenu, a l'usage de l'IA et a la montee en competences ; les resultats dependent du travail et de l'implication de chacun.
+      </p>
+      <p class="footer-copy">(c) BERAT — Tous droits reserves. Mentions legales — Conditions generales — Politique de confidentialite — Contact.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JS VANILLA — minimal, en bas de page
+       ============================================================ -->
+  <script>
+    // Active les enrichissements JS (sinon .no-js garde tout visible)
+    document.body.classList.remove('no-js');
+
+    (function () {
+      'use strict';
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* --- NAV : fond au scroll --- */
+      var nav = document.getElementById('nav');
+      function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 12); }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      /* --- Menu mobile (burger) --- */
+      var burger = document.getElementById('burger');
+      var menu = document.getElementById('mobileMenu');
+      function closeMenu(){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); burger.setAttribute('aria-label','Ouvrir le menu'); }
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        burger.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      });
+      menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+
+      /* --- FAQ accordeon --- */
+      document.querySelectorAll('.faq-item').forEach(function (item) {
+        var btn = item.querySelector('.faq-q');
+        var panel = item.querySelector('.faq-a');
+        btn.addEventListener('click', function () {
+          var open = item.getAttribute('aria-expanded') === 'true';
+          item.setAttribute('aria-expanded', open ? 'false' : 'true');
+          panel.style.maxHeight = open ? null : panel.scrollHeight + 'px';
+        });
+      });
+
+      /* --- Reveals au scroll (IntersectionObserver) --- */
+      var reveals = document.querySelectorAll('.reveal');
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        // Degradation gracieuse : tout visible immediatement
+        reveals.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry, i) {
+            if (entry.isIntersecting) {
+              // leger stagger pour les elements d'une meme grille
+              var delay = Math.min(i * 60, 240);
+              setTimeout(function () { entry.target.classList.add('in'); }, delay);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+        reveals.forEach(function (el) { io.observe(el); });
+      }
+
+      /* --- Smooth scroll ancres (fallback si scroll-behavior indisponible) --- */
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var id = link.getAttribute('href');
+          if (id.length < 2) return;
+          var target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          var y = target.getBoundingClientRect().top + window.scrollY - 72;
+          window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
